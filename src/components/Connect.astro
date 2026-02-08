@@ -1,0 +1,78 @@
+---
+import {
+  Instagram,
+  Github,
+  Linkedin,
+  Twitter
+} from "@lucide/astro";
+
+const socials = [
+  {
+    name: "Instagram",
+    href: "https://instagram.com/suryaaprakassh",
+    icon: Instagram,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/suryaaprakassh",
+    icon: Github,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com/in/suryaaprakassh",
+    icon: Linkedin,
+  },
+  {
+    name: "Twitter",
+    href: "https://twitter.com/suryaaprakassh",
+    icon: Twitter,
+  },
+];
+---
+<div>
+    <h3>Let's Connect<h3>
+<p>If you wanna get in touch with me or say a hi , reach me out on <b>social media</b>
+    or through a <b>mail</b></p>
+    <div>
+    </div>
+<ul class="socials">
+  {socials.map(({ name, href, icon: Icon }) => (
+    <li>
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={name}
+      >
+        <Icon size={20} />
+      </a>
+    </li>
+  ))}
+</ul>
+    <a href="mailto:suryaaprakassh@gmail.com">suryaaprakassh@gmail.com</a>
+<div>
+
+<style>
+  .socials {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .socials a {
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .socials a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+a {
+    font-size: 16px;
+    }
+</style>

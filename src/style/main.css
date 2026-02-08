@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "source-sans";
+    src: url("/fonts/SourceSans3-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "source-sans";
+    src: url("/fonts/SourceSans3-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+@font-face {
+    font-family: "source-sans";
+    src: url("/fonts/SourceSans3-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+:root {
+    --primary: #18181B;
+    --secondary: #FFF;
+    --tertiary: #aaa;
+}
+
+* {
+    font-family: "source-sans";
+    font-weight: 500;
+    background-color: var(--primary);
+    color: var(--secondary);
+    box-sizing: border-box;
+}
+
+body {
+    display: flex; 
+    width: 100vw;
+    height: 100vh;
+    padding: 20px;
+    justify-content: center;
+}
+
+p {
+    font-weight: 300;
+    color: var(--tertiary);
+    line-height:1.8;
+    font-style: italic;
+    font-size:17px;
+}
+

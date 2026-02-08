@@ -1,0 +1,39 @@
+---
+const {role,period,company} = Astro.props 
+---
+<div>
+    <div>
+        <h3>{company}</h3>
+        <h4>{period}</h4>
+        <h4>{role}</h4>
+    </div>
+    <div class="scope">
+        <slot/>
+    </div>
+</div>
+
+<style>
+h3 {
+    padding: 0;
+    margin: 10px 0;
+}
+h4 {
+    margin: 5px 0;
+    padding: 0;
+    color: var(--tertiary);
+    font-style: italic;
+    font-size: 15px;
+}
+
+.scope :global(ul){
+    margin: 20px;
+    padding: 0;
+    list-style-type: "✦  ";
+}
+
+.scope :global(li){
+    line-height: 1.8;
+    color: #ccc;
+    font-style: italic;
+}
+</style>

@@ -1,0 +1,53 @@
+---
+    interface Link {
+        name: string;
+        link: string;
+    }
+    const links:[Link] = [
+            {
+            name: "work",
+                link: "/work"
+        },
+            {
+            name: "projects",
+                link: "/projects"
+        },
+            {
+            name: "blog",
+                link: "/blog"
+            }
+    ]
+---
+<div id="nav-container">
+    <div>
+        <h2>
+            <a href="/">
+                Suryaprakash
+            </a>
+        </h2>
+    </div>
+    <div>
+        {
+            links.map(link=><a href={link.link}>{link.name}</a>)
+        }
+    </div>
+</div>
+
+<style>
+div>a {
+    text-decoration: none;
+    margin: 2px 20px;
+    font-size: 17px;
+    color: #aaa;
+    transition: all 1s ease-out;
+}
+div>a:hover {
+    text-decoration:wavy underline #fff;
+}
+
+#nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+</style>

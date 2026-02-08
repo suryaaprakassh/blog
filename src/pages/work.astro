@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layout/BaseLayout.astro"
+import Work from "../components/Work.astro"
+
+import {getCollection,render} from "astro:content"
+
+const work = await getCollection("work");
+
+const renderedWork = await Promise.all(
+  work.map(async (w) => {
+    const { Content, headings } = await render(w);
+    return { Content, data: w.data };
+  })
+);
+
+---
+<BaseLayout>
+    {renderedWork.map(({ Content ,data}) => (
+    <Work {...data} >
+        <Content />
+    </Work>
+  ))}
+</BaseLayout>

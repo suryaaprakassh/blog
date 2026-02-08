@@ -17,9 +17,15 @@ importers:
       '@astrojs/sitemap':
         specifier: ^3.7.0
         version: 3.7.0
+      '@lucide/astro':
+        specifier: ^0.563.0
+        version: 0.563.0(astro@5.17.1(rollup@4.57.1)(typescript@5.9.3))
       astro:
         specifier: ^5.17.1
         version: 5.17.1(rollup@4.57.1)(typescript@5.9.3)
+      lucide-astro:
+        specifier: ^0.556.0
+        version: 0.556.0(astro@5.17.1(rollup@4.57.1)(typescript@5.9.3))
       sharp:
         specifier: ^0.34.3
         version: 0.34.5
@@ -390,6 +396,11 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@lucide/astro@0.563.0':
+    resolution: {integrity: sha512-X9fNJvRR6pLJfkIEAFQkizWaNVvcduunJoFyR3fwPu30Y6jOu5S9k4k7HTSk3ZrEfqK2eFEqrBqqWH4fwSNKCg==}
+    peerDependencies:
+      astro: ^4 || ^5
 
   '@mdx-js/mdx@3.1.1':
     resolution: {integrity: sha512-f6ZO2ifpwAQIpzGWaBQT2TXxPv6z3RBzQKpVftEWN78Vl/YweF1uwussDx8ECAXVtr3Rs89fKyG9YlzUs9DyGQ==}
@@ -1021,6 +1032,12 @@ packages:
   lru-cache@11.2.5:
     resolution: {integrity: sha512-vFrFJkWtJvJnD5hg+hJvVE8Lh/TcMzKnTgCWmtBipwI5yLX/iX+5UB2tfuyODF5E7k9xEzMdYgGqaSb1c0c5Yw==}
     engines: {node: 20 || >=22}
+
+  lucide-astro@0.556.0:
+    resolution: {integrity: sha512-ugMjPb45AMfkLCaduNSbyy5NQEKvB1TxVVMmUS4S6L807PMESnX0Qp+DIKHjbyjJmPXOyLRbrzvR3YikTK7brg==}
+    deprecated: 'Deprecated: Use `@lucide/astro`'
+    peerDependencies:
+      astro: '>=2.7.1'
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
@@ -1980,6 +1997,10 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
+  '@lucide/astro@0.563.0(astro@5.17.1(rollup@4.57.1)(typescript@5.9.3))':
+    dependencies:
+      astro: 5.17.1(rollup@4.57.1)(typescript@5.9.3)
+
   '@mdx-js/mdx@3.1.1':
     dependencies:
       '@types/estree': 1.0.8
@@ -2739,6 +2760,10 @@ snapshots:
   longest-streak@3.1.0: {}
 
   lru-cache@11.2.5: {}
+
+  lucide-astro@0.556.0(astro@5.17.1(rollup@4.57.1)(typescript@5.9.3)):
+    dependencies:
+      astro: 5.17.1(rollup@4.57.1)(typescript@5.9.3)
 
   magic-string@0.30.21:
     dependencies:
