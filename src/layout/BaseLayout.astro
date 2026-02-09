@@ -1,8 +1,9 @@
 ---
 import { SITE_TITLE } from "../consts.ts";
-import NavComponent from "../components/NavComponent.astro"
-import Connect from "../components/Connect.astro"
-import Footer from "../components/Footer.astro"
+import NavComponent from "../components/NavComponent.astro";
+import Connect from "../components/Connect.astro";
+import Footer from "../components/Footer.astro";
+import { ClientRouter ,slide} from "astro:transitions";
 const {title=SITE_TITLE } = Astro.props
 import "../style/main.css"
 ---
@@ -30,5 +31,19 @@ import "../style/main.css"
         div {
             width: 100%;
         }
+    }
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+    body :global(*) {
+        animation: fadeInUp 0.6s ease-out forwards;
     }
 </style>
