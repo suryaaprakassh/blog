@@ -3,14 +3,12 @@ import { SITE_TITLE } from "../consts.ts";
 import NavComponent from "../components/NavComponent.astro"
 import Connect from "../components/Connect.astro"
 import Footer from "../components/Footer.astro"
-import { ViewTransitions } from "astro:transitions";
 const {title=SITE_TITLE } = Astro.props
 import "../style/main.css"
 ---
 <html lang="en">
     <head>
         <title>{title}</title>
-        <ViewTransitions />
     </head>
     <body>
         <div>

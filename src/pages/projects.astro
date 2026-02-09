@@ -1,0 +1,31 @@
+---
+import Project from "../components/Project.astro";
+import BaseLayout from "../layout/BaseLayout.astro"
+    interface Project {
+        name: string;
+        description: string;
+        link: string;
+    }
+    const projects:[Project] =  [
+        {
+            name: "test",
+            description: "test test test test test test test test test test test test",
+            link: "https://github.com/suryaaprakassh"
+    },
+        {
+            name: "test",
+            description: "test test test test test test test test test test test test",
+            link: "https://github.com/suryaaprakassh"
+    },
+        {
+            name: "test",
+            description: "test test test test test test test test test test test test",
+            link: "https://github.com/suryaaprakassh"
+    },
+    ]
+---
+<BaseLayout>
+{
+projects.map(p=><Project {...p}/>)
+}
+</BaseLayout>
