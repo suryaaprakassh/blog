@@ -28,11 +28,22 @@ h4 {
 .scope :global(ul){
     margin: 20px;
     padding: 0;
-    list-style-type: "✦  ";
+    list-style-type: none;
+    padding-left: 1.25rem;
 }
 
 .scope :global(li){
+    position: relative;
     line-height: 1.8;
     color: #ccc;
 }
+
+
+.scope :global(li::before){
+    position: absolute;
+    content: "✦"; 
+    position: absolute;
+    left: -1.25rem;
+}
+
 </style>

@@ -49,7 +49,7 @@ body {
 }
 
 p {
-    font-weight: 300;
+    font-weight: 500;
     color: var(--tertiary);
     line-height:1.8;
     font-style: italic;
